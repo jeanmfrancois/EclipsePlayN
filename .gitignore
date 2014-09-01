@@ -1,5 +1,8 @@
 *.class
 
+# Target directory in any folder vs /target/ (root target folder) vs /*/target/ (root children target folders) vs /*/*/target (grandchildren) X
+*target*
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -8,5 +11,15 @@
 *.war
 *.ear
 
+# Eclipse project settings
+*.metadata*
+*.project*
+*.settings*
+*.classpath*
+
+# Mac directory info
+.DS_Store
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
