@@ -9,7 +9,7 @@
 		<string>touch-icon-57x57.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>com.jfbuids.playngame.framework</string>
+	<string>com.jfbuilds.playngame.framework</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>MinimumOSVersion</key>

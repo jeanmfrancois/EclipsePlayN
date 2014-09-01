@@ -7,5 +7,5 @@
 
   <public path="resources" />
 
-  <entry-point class='com.jfbuids.playngame.framework.html.GameOnHtml'/>
+  <entry-point class='com.jfbuilds.playngame.framework.html.GameOnHtml'/>
 </module>

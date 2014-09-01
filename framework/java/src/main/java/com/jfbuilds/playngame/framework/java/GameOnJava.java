@@ -1,9 +1,9 @@
-package com.jfbuids.playngame.framework.java;
+package com.jfbuilds.playngame.framework.java;
 
 import playn.core.PlayN;
 import playn.java.JavaPlatform;
 
-import com.jfbuids.playngame.framework.core.GameOn;
+import com.jfbuilds.playngame.framework.core.GameOn;
 
 public class GameOnJava {
 

@@ -1,4 +1,4 @@
-package com.jfbuids.playngame.framework.core;
+package com.jfbuilds.playngame.framework.core;
 
 import static playn.core.PlayN.*;
 

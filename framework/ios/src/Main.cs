@@ -4,9 +4,9 @@ using MonoTouch.UIKit;
 
 using playn.ios;
 using playn.core;
-using com.jfbuids.playngame.framework.core;
+using com.jfbuilds.playngame.framework.core;
 
-namespace com.jfbuids.playngame.framework
+namespace com.jfbuilds.playngame.framework
 {
   [Register ("AppDelegate")]
   public partial class AppDelegate : IOSApplicationDelegate {

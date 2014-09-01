@@ -4,9 +4,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.jfbuids.playngame</groupId>
+    <groupId>com.jfbuilds.playngame</groupId>
     <artifactId>framework</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>framework-ios</artifactId>
@@ -15,7 +15,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.jfbuids.playngame</groupId>
+      <groupId>com.jfbuilds.playngame</groupId>
       <artifactId>framework-core</artifactId>
       <version>${project.version}</version>
     </dependency>

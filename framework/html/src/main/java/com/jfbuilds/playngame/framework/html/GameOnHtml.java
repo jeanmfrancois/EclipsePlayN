@@ -1,10 +1,10 @@
-package com.jfbuids.playngame.framework.html;
+package com.jfbuilds.playngame.framework.html;
 
 import playn.core.PlayN;
 import playn.html.HtmlGame;
 import playn.html.HtmlPlatform;
 
-import com.jfbuids.playngame.framework.core.GameOn;
+import com.jfbuilds.playngame.framework.core.GameOn;
 
 public class GameOnHtml extends HtmlGame {
 

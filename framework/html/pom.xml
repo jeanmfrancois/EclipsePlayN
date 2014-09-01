@@ -4,9 +4,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.jfbuids.playngame</groupId>
+    <groupId>com.jfbuilds.playngame</groupId>
     <artifactId>framework</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>framework-html</artifactId>
@@ -14,7 +14,7 @@
   <name>GameOn HTML</name>
 
   <properties>
-    <gwt.module>com.jfbuids.playngame.framework.GameOn</gwt.module>
+    <gwt.module>com.jfbuilds.playngame.framework.GameOn</gwt.module>
     <gwt.name>framework</gwt.name>
     <!-- Desired Google App Engine SDK version -->
     <gae.version>1.6.1</gae.version>
@@ -22,20 +22,20 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.jfbuids.playngame</groupId>
+      <groupId>com.jfbuilds.playngame</groupId>
       <artifactId>framework-core</artifactId>
       <version>${project.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>com.jfbuids.playngame</groupId>
+      <groupId>com.jfbuilds.playngame</groupId>
       <artifactId>framework-core</artifactId>
       <version>${project.version}</version>
       <classifier>sources</classifier>
     </dependency>
 
     <dependency>
-      <groupId>com.jfbuids.playngame</groupId>
+      <groupId>com.jfbuilds.playngame</groupId>
       <artifactId>framework-assets</artifactId>
       <version>${project.version}</version>
     </dependency>
