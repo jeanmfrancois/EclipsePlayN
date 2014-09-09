@@ -4,7 +4,6 @@
 package com.jfbuilds.playngame.general;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 /**
  * @author Jean

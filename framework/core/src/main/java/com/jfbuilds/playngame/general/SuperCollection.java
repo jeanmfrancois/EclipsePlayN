@@ -3,16 +3,14 @@
  */
 package com.jfbuilds.playngame.general;
 
-import java.util.ArrayList;
-
 /**
  * @author Jean
  *
  */
 public class SuperCollection extends SimpleCollection implements JFBContainerCollectionInterface {
 
-	private String headOfFamily;
-	private ArrayList<SuperCollection> myFamily;
+//	private String headOfFamily;
+//	private ArrayList<SuperCollection> myFamily;
 	
 	/**
 	 * 

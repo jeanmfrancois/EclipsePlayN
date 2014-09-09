@@ -2,14 +2,8 @@ package com.jfbuilds.playngame.framework.core;
 
 import static playn.core.PlayN.*;
 
-import java.awt.Event;
-import java.awt.List;
-import java.awt.event.MouseEvent;
-import java.util.ArrayList;
-import java.util.Iterator;
-
-import com.jfbuilds.playngame.general.JFBContainerCollectionInterface;
-import com.jfbuilds.playngame.general.JFBContainerCollection;
+//import java.util.ArrayList;
+//import com.jfbuilds.playngame.general.JFBContainerCollection;
 
 import playn.core.Game;
 import playn.core.Image;
@@ -30,16 +24,16 @@ public class GameOn extends Game.Default {
 		graphics().rootLayer().add(bgLayer);
 
 		System.out.print("Output: ");
-		JFBContainerCollection col = new JFBContainerCollection("Jean");
-		ArrayList<JFBContainerCollection> myFamily = col.getFamily();
-		for (Iterator iterator = myFamily.iterator(); iterator.hasNext();) {
-			JFBContainerCollection jfbContainerCollection = (JFBContainerCollection) iterator.next();
-			System.out.println(jfbContainerCollection.getName());
-		}
+//		JFBContainerCollection col = new JFBContainerCollection("Jean");
+//		ArrayList<JFBContainerCollection> myFamily = col.getFamily();
+//		for (Iterator iterator = myFamily.iterator(); iterator.hasNext();) {
+//			JFBContainerCollection jfbContainerCollection = (JFBContainerCollection) iterator.next();
+//			System.out.println(jfbContainerCollection.getName());
+//		}
 		
-		for (int i = 0; i < JFBContainerCollectionInterface.FragmentType.values().length; i++) {
-			System.out.println("Type:" + JFBContainerCollectionInterface.FragmentType.values()[i].name() + " - Allow Multiple: " + JFBContainerCollectionInterface.FragmentType.values()[i].multipleAllowed());
-		}
+//		for (int i = 0; i < JFBContainerCollectionInterface.FragmentType.values().length; i++) {
+//			System.out.println("Type:" + JFBContainerCollectionInterface.FragmentType.values()[i].name() + " - Allow Multiple: " + JFBContainerCollectionInterface.FragmentType.values()[i].multipleAllowed());
+//		}
 
 		//GenerateCode.sampleInit();
 	}

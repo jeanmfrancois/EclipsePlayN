@@ -1,3 +1,4 @@
+<!DOCTYPE something>
 <module rename-to='framework'>
   <inherits name='playn.PlayN'/>
   <inherits name='GameOnAssets'/>
