@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/framework/framework.iml" filepath="$PROJECT_DIR$/framework/framework.iml" group="framework and modules" />
+      <module fileurl="file://$PROJECT_DIR$/framework/android/framework-android.iml" filepath="$PROJECT_DIR$/framework/android/framework-android.iml" group="framework and modules" />
+      <module fileurl="file://$PROJECT_DIR$/framework/assets/framework-assets.iml" filepath="$PROJECT_DIR$/framework/assets/framework-assets.iml" group="framework and modules" />
+      <module fileurl="file://$PROJECT_DIR$/framework/core/framework-core.iml" filepath="$PROJECT_DIR$/framework/core/framework-core.iml" group="framework and modules" />
+      <module fileurl="file://$PROJECT_DIR$/framework/html/framework-html (1).iml" filepath="$PROJECT_DIR$/framework/html/framework-html (1).iml" group="framework and modules" />
+      <module fileurl="file://$PROJECT_DIR$/framework/html/target/m2e-wtp/web-resources/META-INF/maven/com.jfbuilds.playngame/framework-html/framework-html (2).iml" filepath="$PROJECT_DIR$/framework/html/target/m2e-wtp/web-resources/META-INF/maven/com.jfbuilds.playngame/framework-html/framework-html (2).iml" />
+      <module fileurl="file://$PROJECT_DIR$/framework/ios/framework-ios.iml" filepath="$PROJECT_DIR$/framework/ios/framework-ios.iml" group="framework and modules" />
+      <module fileurl="file://$PROJECT_DIR$/framework/java/framework-java.iml" filepath="$PROJECT_DIR$/framework/java/framework-java.iml" group="framework and modules" />
+    </modules>
+  </component>
+</project>
+

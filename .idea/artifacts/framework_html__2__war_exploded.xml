@@ -1,0 +1,39 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="framework-html (2):war exploded">
+    <output-path>$PROJECT_DIR$/framework/html/target/m2e-wtp/web-resources/META-INF/maven/com.jfbuilds.playngame/framework-html/target/framework-html-1.0-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="framework-html (2)/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="framework-html (2)" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="framework-core-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="framework-core" />
+          </element>
+          <element id="library" level="project" name="Maven: com.googlecode.playn:playn-core:1.8.5" />
+          <element id="library" level="project" name="Maven: com.samskivert:pythagoras:1.3.2" />
+          <element id="archive" name="framework-core-1.0-SNAPSHOT-sources.jar">
+            <element id="module-output" name="framework-core" />
+          </element>
+          <element id="archive" name="framework-assets-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="framework-assets" />
+          </element>
+          <element id="library" level="project" name="Maven: com.googlecode.playn:playn-html:1.8.5" />
+          <element id="library" level="project" name="Maven: com.googlecode.playn:playn-core:sources:1.8.5" />
+          <element id="library" level="project" name="Maven: com.googlecode.playn:playn-webgl:1.8.5" />
+          <element id="library" level="project" name="Maven: com.google.gwt:gwt-user:2.5.0" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.0.0.GA" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:sources:1.0.0.GA" />
+          <element id="library" level="project" name="Maven: org.json:json:20090211" />
+          <element id="library" level="project" name="Maven: com.googlecode.playn:playn-webgl:sources:1.8.5" />
+          <element id="library" level="project" name="Maven: com.allen-sauer.gwt.voices:gwt-voices:3.2.0" />
+          <element id="library" level="project" name="Maven: com.googlecode.playn:playn-html:sources:1.8.5" />
+          <element id="library" level="project" name="Maven: com.google.appengine:appengine-api-1.0-sdk:1.6.1" />
+          <element id="library" level="project" name="Maven: com.google.appengine:appengine-api-labs:1.6.1" />
+        </element>
+      </element>
+      <element id="gwt-compiler-output" facet="framework-html (2)/gwt/GWT" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="framework-html (2):war">
+    <output-path>$PROJECT_DIR$/framework/html/target/m2e-wtp/web-resources/META-INF/maven/com.jfbuilds.playngame/framework-html/target</output-path>
+    <root id="archive" name="framework-html-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="framework-html (2):war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -3,6 +3,9 @@
 # Target directory in any folder vs /target/ (root target folder) vs /*/target/ (root children target folders) vs /*/*/target (grandchildren) X
 *target*
 
+# Bin directory in any folder vs /bin/ (root bin folder) vs /*/bin/ (root children bin folders) vs /*/*/bin (grandchildren) X
+*bin*
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 

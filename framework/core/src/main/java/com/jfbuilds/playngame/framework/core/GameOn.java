@@ -2,11 +2,16 @@ package com.jfbuilds.playngame.framework.core;
 
 import static playn.core.PlayN.*;
 
-import com.jfbuilds.playngame.utils.GenerateCode;
+import java.awt.Event;
+import java.awt.List;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.Iterator;
 
+import com.jfbuilds.playngame.general.JFBContainerCollectionInterface;
+import com.jfbuilds.playngame.general.JFBContainerCollection;
 
 import playn.core.Game;
-
 import playn.core.Image;
 import playn.core.ImageLayer;
 
@@ -24,9 +29,19 @@ public class GameOn extends Game.Default {
 		ImageLayer bgLayer = graphics().createImageLayer(bgImage);
 		graphics().rootLayer().add(bgLayer);
 
+		System.out.print("Output: ");
+		JFBContainerCollection col = new JFBContainerCollection("Jean");
+		ArrayList<JFBContainerCollection> myFamily = col.getFamily();
+		for (Iterator iterator = myFamily.iterator(); iterator.hasNext();) {
+			JFBContainerCollection jfbContainerCollection = (JFBContainerCollection) iterator.next();
+			System.out.println(jfbContainerCollection.getName());
+		}
 		
+		for (int i = 0; i < JFBContainerCollectionInterface.FragmentType.values().length; i++) {
+			System.out.println("Type:" + JFBContainerCollectionInterface.FragmentType.values()[i].name() + " - Allow Multiple: " + JFBContainerCollectionInterface.FragmentType.values()[i].multipleAllowed());
+		}
 
-		GenerateCode.sampleInit();
+		//GenerateCode.sampleInit();
 	}
 
 	

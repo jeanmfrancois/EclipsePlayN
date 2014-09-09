@@ -39,6 +39,8 @@
 
   <build>
     <plugins>
+    
+   
       <!-- builds a standalone jar file during 'mvn package' -->
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
