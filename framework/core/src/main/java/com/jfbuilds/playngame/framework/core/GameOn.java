@@ -2,15 +2,14 @@ package com.jfbuilds.playngame.framework.core;
 
 import static playn.core.PlayN.*;
 
-//import java.util.ArrayList;
-//import com.jfbuilds.playngame.general.JFBContainerCollection;
+import com.jfbuilds.playngame.general.SimpleGame;
 
 import playn.core.Game;
 import playn.core.Image;
 import playn.core.ImageLayer;
 
 
-public class GameOn extends Game.Default {
+public class GameOn extends SimpleGame {
 
 	public GameOn() {
 		super(33); // call update every 33ms (30 times per second)
@@ -24,6 +23,9 @@ public class GameOn extends Game.Default {
 		graphics().rootLayer().add(bgLayer);
 
 		System.out.print("Output: ");
+		
+		
+		
 //		JFBContainerCollection col = new JFBContainerCollection("Jean");
 //		ArrayList<JFBContainerCollection> myFamily = col.getFamily();
 //		for (Iterator iterator = myFamily.iterator(); iterator.hasNext();) {

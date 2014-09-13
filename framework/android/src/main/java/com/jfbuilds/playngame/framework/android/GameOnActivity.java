@@ -9,6 +9,6 @@ public class GameOnActivity extends GameActivity {
 
   @Override
   public void main(){
-    PlayN.run(new GameOn());
+    PlayN.run(new Zankie());
   }
 }

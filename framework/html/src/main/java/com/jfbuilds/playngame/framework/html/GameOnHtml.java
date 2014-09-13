@@ -14,6 +14,6 @@ public class GameOnHtml extends HtmlGame {
     // use config to customize the HTML platform, if needed
     HtmlPlatform platform = HtmlPlatform.register(config);
     platform.assets().setPathPrefix("framework/");
-    PlayN.run(new GameOn());
+    PlayN.run(new Zankie());
   }
 }
