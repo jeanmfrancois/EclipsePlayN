@@ -118,6 +118,11 @@ public interface JFBContainerInterface {
 	/**
 	 * change to next instance in container family if allowed
 	 **/
+	public void previous();
+	
+	/**
+	 * change to previous instance in container family if allowed
+	 **/
 	public void next();
 
 	/**

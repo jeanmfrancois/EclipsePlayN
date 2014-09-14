@@ -31,7 +31,9 @@ Game {
 	private ArrayList<? extends JFBGameAbilityInterface> gameAbilities;
 	private ArrayList<? extends JFBGameObjectiveInterface> gameObjectives;
 	private ArrayList<? extends JFBSceneInterface> gameScenes;
-	Sound click;
+	Sound click1;
+	Sound click2;
+	Sound click3;
 
 	/*
 	 * (non-Javadoc)
@@ -145,7 +147,9 @@ Game {
 			}
 		});
 
-		click = assets().getSound("sounds/sword-whip-01");
+		click1 = assets().getSound("sounds/sword-whip-02");
+		click2 = assets().getSound("sounds/sword-whip-03");
+		click3 = assets().getSound("sounds/sword-whip-04");
 
 	}
 
@@ -242,9 +246,20 @@ Game {
 	}
 
 	public void userSelect(float x, float y) {
-		System.out.println("User has click cordinates: (" + x + ", " + y + ")");
-		click.play();
-		getCurrentScene().next();
+		System.out.println("User click: (" + x + ", " + y + ") - Index:" + getContentIndex() + " /Size:" + getContainers().size());
+		
+		if (x < 100) {
+			click1.play();
+			System.out.println("PREVIOUS");
+			getCurrentScene().previous();
+		} else if (x > 540) {
+			click2.play();
+			System.out.println("NEXT");
+			getCurrentScene().next();
+		} else {
+			System.out.println("VOID");
+			click3.play();
+		}
 	}
 
 }

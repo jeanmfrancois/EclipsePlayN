@@ -34,7 +34,6 @@ public abstract class JFBAbstractContainer implements JFBContainerInterface {
 	private JFBContainerInterface parent;
 	private ArrayList<JFBContainerInterface> containers;
 	private HashSet<JFBAbilityInterface> abilities;
-
 	private HashSet<JFBObjectiveInterface> objectives;
 
 	@Override
@@ -197,18 +196,36 @@ public abstract class JFBAbstractContainer implements JFBContainerInterface {
 
 	@Override
 	public void next() {
-		// TODO Auto-generated method stub
-		// ArrayList<? extends JFBContainerInterface> family =
-		// getContainerFamily();
-		System.out.println("Parent of " + this.getName() + " is: " + parent().getName());
-		int parentIndex = parent().getContentIndex();
-		System.out.println("Parent index:" + parentIndex);
-		int nextIndex = parentIndex + 1;
-		System.out.println("Next index:" + nextIndex);
-		parent().setContentIndex(nextIndex);
-		parent().getContainers().get(parentIndex).destroy();
-		parent().setBase(parent().getContainers().get(nextIndex).getBase());
-		parent().initBase();
+		if (parent().getContentIndex() < parent().getContainers().size()-1) {
+			// destroy the old container content
+			parent().getContainers().get(parent().getContentIndex()).destroy();
+			// set the parent index to n+1
+			parent().setContentIndex(parent().getContentIndex() + 1);
+			// set the base content of parent container to container's base content
+			parent().setBase(parent().getContainers().get(parent().getContentIndex()).getBase());
+			// reinitialize the container's base with new content
+			parent().initBase();
+		} else if (parent().getContentIndex() == parent().getContainers().size()-1) {
+			System.exit(0);
+		}
+
+	}
+	
+	@Override
+	public void previous() {
+		
+		if (parent().getContentIndex() > 0) {
+			// destroy the old container content
+			parent().getContainers().get(parent().getContentIndex()).destroy();
+			// set the parent index to n+1
+			parent().setContentIndex(parent().getContentIndex() - 1);
+			// set the base content of parent container to container's base content
+			parent().setBase(parent().getContainers().get(parent().getContentIndex()).getBase());
+			// reinitialize the container's base with new content
+			parent().initBase();
+		} else if (parent().getContentIndex() == 0) {
+			System.exit(0);
+		}
 
 	}
 
