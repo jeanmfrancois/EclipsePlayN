@@ -2,14 +2,15 @@
 
 package com.jfbuilds.playngame.scenes;
 
+import com.jfbuilds.playngame.general.JFBContainerInterface;
+
 /**
  *
  **/
 public class AdventureStage extends SimpleStageScene implements JFBSceneInterface {
 
-	public AdventureStage(String name_) {
-		super(name_);
-		// TODO Auto-generated constructor stub
+	public AdventureStage(String name_, JFBContainerInterface parent_) {
+		super(name_, parent_);
 	}
 
 }

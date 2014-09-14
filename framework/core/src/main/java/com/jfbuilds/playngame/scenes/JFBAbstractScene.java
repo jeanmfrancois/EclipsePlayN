@@ -2,7 +2,15 @@
 
 package com.jfbuilds.playngame.scenes;
 
+import static playn.core.PlayN.assets;
+import static playn.core.PlayN.graphics;
+
+import java.awt.Graphics;
 import java.util.ArrayList;
+
+import playn.core.GroupLayer;
+import playn.core.Image;
+import playn.core.ImageLayer;
 
 import com.jfbuilds.playngame.abilities.JFBSceneAbilityInterface;
 import com.jfbuilds.playngame.fragments.JFBFragmentInterface;
@@ -86,5 +94,28 @@ public abstract class JFBAbstractScene extends JFBAbstractContainer implements J
 		// TODO Auto-generated method stub
 		
 	}
+	
+	@Override 
+	public void init() {
+		initBase();
+		create();
+		
+//		GroupLayer base = graphics().createGroupLayer();
+//		Image image = assets().getImage("images/act_1.png");
+//		ImageLayer imageLayer = graphics().createImageLayer(image);
+//		base.add(imageLayer);
+//		setBase(base);
+	}
+	
+	@Override
+	public void initBase() {
+		GroupLayer base = graphics().createGroupLayer();
+		setBase(base);
+	}
+	
+	@Override 
+	public void create() {
+		addImageLayer("images/opening_act.png");
+	}	
 
 }

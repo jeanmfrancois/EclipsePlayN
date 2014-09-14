@@ -11,6 +11,7 @@ import playn.core.Layer;
 import com.jfbuilds.playngame.abilities.JFBAbilityInterface;
 import com.jfbuilds.playngame.exceptions.AbilityImplementationException;
 import com.jfbuilds.playngame.exceptions.ContainerImplementationException;
+import com.jfbuilds.playngame.exceptions.InvalidSetGetException;
 import com.jfbuilds.playngame.exceptions.ObjectiveImplementationException;
 import com.jfbuilds.playngame.objectives.JFBObjectiveInterface;
 
@@ -35,10 +36,15 @@ public interface JFBContainerInterface {
     /* ==         Methods                 == */
     /* ===================================== */
 
-    /** 
+	/** 
      *    create a new instance
      **/
     public void create();
+    
+    /** 
+     *    create a new instance
+     **/
+    public void init();
 
     /** 
      *    play current instance
@@ -74,6 +80,16 @@ public interface JFBContainerInterface {
      *   destroy the instance and close resources
      **/
     public void destroy();
+    
+    /**
+     *   get the parent container
+     **/
+    public JFBContainerInterface parent();
+    
+    /**
+     *   set the parent container
+     **/
+    public void setParent(JFBContainerInterface parent_);
 
     /**
      *
@@ -98,32 +114,12 @@ public interface JFBContainerInterface {
     /**
      *
      **/
-    public HashSet<? extends JFBAbilityInterface> getAbilityFamily() ;
-
-    /**
-     *
-     **/
-    public void setAbilityFamily(HashSet<? extends JFBAbilityInterface> abilityFamily_) ;
-
-    /**
-     *
-     **/
     public void addAbility(JFBAbilityInterface ability_) throws AbilityImplementationException ;
 
     /**
      *
      **/
     public void removeAbility(JFBAbilityInterface ability_) ;
-
-    /**
-     *
-     **/
-    public HashSet<? extends JFBObjectiveInterface> getObjectiveFamily() ;
-
-    /**
-     *
-     **/
-    public void setObjectiveFamily(HashSet<? extends JFBObjectiveInterface> objectiveFamily_) ;
 
     /**
      *
@@ -175,6 +171,44 @@ public interface JFBContainerInterface {
      **/
     public void setName(String name);
     
+    /** 
+     *    initialize the base to root or groupLayer
+     **/
+    public void initBase();
+
+	int getContentIndex();
+
+	void setContentIndex(int contentIndex_);
+	
+	/**
+	 * @return the containers
+	 */
+	public ArrayList<JFBContainerInterface> getContainers() ;
+	
+	/**
+	 * @param containers the containers to set
+	 */
+	public void setContainers(ArrayList<JFBContainerInterface> containers) ;
+	
+	/**
+	 * @return the abilities
+	 */
+	public HashSet<JFBAbilityInterface> getAbilities() ;
+	
+	/**
+	 * @param abilities the abilities to set
+	 */
+	public void setAbilities(HashSet<JFBAbilityInterface> abilities) ;
+	
+	/**
+	 * @return the objectives
+	 */
+	public HashSet<JFBObjectiveInterface> getObjectives();
+	
+	/**
+	 * @param objectives the objectives to set
+	 */
+	public void setObjectives(HashSet<JFBObjectiveInterface> objectives) ;
     
     
     

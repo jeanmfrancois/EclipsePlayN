@@ -7,11 +7,16 @@ import java.io.Serializable;
 /**
  *
  **/
-public class ObjectiveImplementationException extends ImplementationException implements Serializable {
+public class ObjectiveImplementationException extends JFBImplementationException implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 605257540643037132L;
+	
+	@Override
+	public String getMessage() {
+		return super.getMessage() + ", possibly adding an objective which does not implement a specific interface";
+	}
 
 }

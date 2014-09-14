@@ -3,9 +3,12 @@
 package com.jfbuilds.playngame.general;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
+import com.jfbuilds.playngame.abilities.JFBAbilityInterface;
 import com.jfbuilds.playngame.abilities.JFBGameAbilityInterface;
 import com.jfbuilds.playngame.objectives.JFBGameObjectiveInterface;
+import com.jfbuilds.playngame.objectives.JFBObjectiveInterface;
 import com.jfbuilds.playngame.scenes.JFBSceneInterface;
 
 /**
@@ -34,32 +37,32 @@ public interface JFBGameInterface extends JFBContainerInterface {
     /**
      *
      **/
-    public ArrayList<? extends JFBGameAbilityInterface> getGameAbilities() ;
+    public HashSet<JFBAbilityInterface> getGameAbilities() ;
 
     /**
      *
      **/
-    public void setGameAbilities(ArrayList<? extends JFBGameAbilityInterface> gameAbilities_) ;
+    public void setGameAbilities(HashSet<JFBAbilityInterface> gameAbilities_) ;
 
     /**
      *
      **/
-    public ArrayList<? extends JFBSceneInterface> getGameScenes() ;
+    public ArrayList<JFBContainerInterface> getGameScenes() ;
 
     /**
      *
      **/
-    public void setGameScenes(ArrayList<? extends JFBSceneInterface> gameScenes_) ;
+    public void setGameScenes(ArrayList<JFBContainerInterface> gameScenes_) ;
 
     /**
      *
      **/
-    public ArrayList<? extends JFBGameObjectiveInterface> getGameObjectives() ;
+    public HashSet<JFBObjectiveInterface> getGameObjectives() ;
 
     /**
      *
      **/
-    public void setGameObjectives(ArrayList<? extends JFBGameObjectiveInterface> gameObjectives_) ;
+    public void setGameObjectives(HashSet<JFBObjectiveInterface> gameObjectives_) ;
 
     /**
      *
@@ -67,18 +70,20 @@ public interface JFBGameInterface extends JFBContainerInterface {
     public JFBSceneInterface getCurrentScene() ;
 
     /**
-     *
-     **/
-    public void setCurrentScene(JFBSceneInterface currentScene_) ;
-
-    /**
-     *
-     **/
-    public int getCurrentSceneIndex() ;
-
-    /**
-     *
-     **/
-    public void setCurrentSceneIndex(int currentSceneIndex_) ;
+    *
+    **/
+   public void setCurrentScene(JFBSceneInterface currentScene_) ;
+   
+   /**
+   *
+   **/
+  public void initScenes() ;
+  
+  /**
+  *
+  **/
+ public void createScenes() ;
+    
+    
 
 }

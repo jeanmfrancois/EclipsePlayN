@@ -7,6 +7,16 @@ import static playn.core.PlayN.graphics;
 
 import java.util.ArrayList;
 
+import com.jfbuilds.playngame.exceptions.ContainerImplementationException;
+import com.jfbuilds.playngame.scenes.Act1Scene;
+import com.jfbuilds.playngame.scenes.Act2Scene;
+import com.jfbuilds.playngame.scenes.Act3Scene;
+import com.jfbuilds.playngame.scenes.Act4Scene;
+import com.jfbuilds.playngame.scenes.Act5Scene;
+import com.jfbuilds.playngame.scenes.Act6Scene;
+import com.jfbuilds.playngame.scenes.Act7Scene;
+import com.jfbuilds.playngame.scenes.ClosingActScene;
+import com.jfbuilds.playngame.scenes.OpeningActScene;
 import com.jfbuilds.playngame.scenes.SimpleScene;
 
 import playn.core.GroupLayer;
@@ -21,72 +31,33 @@ public class Zankie extends SimpleGame {
 	public Zankie() {
 		super(33);
 		System.out.println("Game created..");
-		
 	}
 	
 	@Override
 	public void init() {
-		
-		System.out.println("Game init");
-		
-		// init scenes and indexes
-		initScenes();
-		
-		// set the current scene to the first scene's group layer
-		
-		
-		
-		
-		// create and add background image layer
-		Image bgImage = assets().getImage("images/bg.png");
-		ImageLayer bgLayer = graphics().createImageLayer(bgImage);
-		graphics().rootLayer().add(bgLayer);
-
+		super.init();
+		setName("Zankie GameOn!");
 		System.out.print("Zankie is On!!! ");
-		
-		
-		
-//		JFBContainerCollection col = new JFBContainerCollection("Jean");
-//		ArrayList<JFBContainerCollection> myFamily = col.getFamily();
-//		for (Iterator iterator = myFamily.iterator(); iterator.hasNext();) {
-//			JFBContainerCollection jfbContainerCollection = (JFBContainerCollection) iterator.next();
-//			System.out.println(jfbContainerCollection.getName());
-//		}
-		
-//		for (int i = 0; i < JFBContainerCollectionInterface.FragmentType.values().length; i++) {
-//			System.out.println("Type:" + JFBContainerCollectionInterface.FragmentType.values()[i].name() + " - Allow Multiple: " + JFBContainerCollectionInterface.FragmentType.values()[i].multipleAllowed());
-//		}
+	}
+@Override
+public void createScenes() {
 
-		//GenerateCode.sampleInit();
-		
-		
+		try {
+			this.addContainer(new OpeningActScene("Opening Act", this));
+			this.addContainer(new Act1Scene("Act 1", this));
+			this.addContainer(new Act2Scene("Act 2", this));
+			this.addContainer(new Act3Scene("Act 3", this));
+			this.addContainer(new Act4Scene("Act 4", this));
+			this.addContainer(new Act5Scene("Act 5", this));
+			this.addContainer(new Act6Scene("Act 6", this));
+			this.addContainer(new Act7Scene("Act 7", this));
+			this.addContainer(new ClosingActScene("Closing Act", this));
+		} catch (ContainerImplementationException e) {
+			e.getMessage();
+			e.printStackTrace();
+		}
 	}
 
-private void createScenes() {
-		
-		//create array of scenes
-		ArrayList<SimpleScene> scenes = new ArrayList<SimpleScene>();
-		scenes.add(new SimpleScene("Opening Act"));
-		scenes.add(new SimpleScene("Act 1"));
-		scenes.add(new SimpleScene("Act 2"));
-		scenes.add(new SimpleScene("Act 3"));
-		scenes.add(new SimpleScene("Act 4"));
-		scenes.add(new SimpleScene("Act 5"));
-		scenes.add(new SimpleScene("Closing Act"));
-		this.setGameScenes(scenes);
-	}
-
-	private void initScenes() {
-	
-		// set the scene index to 0
-		setCurrentSceneIndex(0);
-		
-		// create the scene for the game
-		createScenes();
-		
-		// get the current scene 
-		System.out.println("Current Scene is " + getCurrentScene().getName());
-	}
 
 	@Override
 	public void paint(float alpha) {

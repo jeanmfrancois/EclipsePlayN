@@ -7,7 +7,15 @@ import java.io.Serializable;
 /**
  *
  **/
-public class ContainerImplementationException extends ImplementationException implements Serializable {
+public class ContainerImplementationException extends JFBImplementationException implements Serializable {
+
+	/* (non-Javadoc)
+	 * @see java.lang.Throwable#getMessage()
+	 */
+	@Override
+	public String getMessage() {
+		return super.getMessage() + ", possibly adding a container object which does not implement a specific interface";
+	}
 
 	/**
 	 * 

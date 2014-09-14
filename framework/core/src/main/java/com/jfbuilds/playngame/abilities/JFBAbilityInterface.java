@@ -2,8 +2,11 @@
 
 package com.jfbuilds.playngame.abilities;
 
+import java.util.HashSet;
+
 import com.jfbuilds.playngame.general.JFBActionInterface;
 import com.jfbuilds.playngame.general.JFBConditionInterface;
+import com.jfbuilds.playngame.general.JFBContainerInterface;
 import com.jfbuilds.playngame.general.JFBDisplayInterface;
 import com.jfbuilds.playngame.general.JFBEventBindsInterface;
 import com.jfbuilds.playngame.general.JFBResetInterface;
@@ -109,5 +112,26 @@ public interface JFBAbilityInterface {
      *
      **/
     public boolean isAbilityCandidate(JFBAbilityInterface candidate) ;
+    
+    /**
+    *
+    **/
+   public HashSet<? extends JFBAbilityInterface> getAbilityFamily() ;
+
+   /**
+   *
+   **/
+  public void setAbilityFamily(HashSet<? extends JFBAbilityInterface> abilityFamily_) ;
+  
+  /**
+  *
+  **/
+ public void setParent(JFBContainerInterface parent_) ;
+ 
+ /**
+ *
+ **/
+ public JFBContainerInterface parent() ;
+    
 
 }

@@ -2,8 +2,11 @@
 
 package com.jfbuilds.playngame.objectives;
 
+import java.util.HashSet;
+
 import com.jfbuilds.playngame.general.JFBActionInterface;
 import com.jfbuilds.playngame.general.JFBConditionInterface;
+import com.jfbuilds.playngame.general.JFBContainerInterface;
 import com.jfbuilds.playngame.general.JFBEventBindsInterface;
 import com.jfbuilds.playngame.general.JFBResetInterface;
 import com.jfbuilds.playngame.general.JFBStatusInterface;
@@ -145,5 +148,25 @@ public interface JFBObjectiveInterface {
      *
      **/
     public boolean isObjectiveCandidate(JFBObjectiveInterface candidate);
+    
+    /**
+    *
+    **/
+   public HashSet<? extends JFBObjectiveInterface> getObjectiveFamily() ;
+
+   /**
+    *
+    **/
+   public void setObjectiveFamily(HashSet<? extends JFBObjectiveInterface> objectiveFamily_) ;
+   
+   /**
+   *
+   **/
+  public void setParent(JFBContainerInterface parent_) ;
+  
+  /**
+  *
+  **/
+  public JFBContainerInterface parent() ;
 
 }

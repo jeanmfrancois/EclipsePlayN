@@ -2,6 +2,11 @@
 
 package com.jfbuilds.playngame.general;
 
+import java.util.ArrayList;
+
+import com.jfbuilds.playngame.exceptions.ContainerImplementationException;
+import com.jfbuilds.playngame.scenes.SimpleScene;
+
 import playn.core.Asserts;
 import playn.core.Game;
 import playn.core.PlayN;
@@ -16,8 +21,10 @@ public class SimpleGame extends JFBAbstractGame implements Game {
     private int nextUpdate;
 	
 	public SimpleGame(int updateRate) {
+		super.init();
 		Asserts.checkArgument(updateRate > 0, "updateRate must be greater than zero.");
 	    this.setUpdateRate(updateRate);
+	    setName("Simple GameOn!");
 	}
     /**
 	 * @return the nextUpdate
@@ -102,6 +109,23 @@ public class SimpleGame extends JFBAbstractGame implements Game {
      */
     public void update(int delta) {
     }
+	@Override
+	public void createScenes() {
+		try {
+			this.addContainer(new SimpleScene("Opening Act", this));
+			this.addContainer(new SimpleScene("Act 1", this));
+			this.addContainer(new SimpleScene("Act 2", this));
+			this.addContainer(new SimpleScene("Act 3", this));
+			this.addContainer(new SimpleScene("Act 4", this));
+			this.addContainer(new SimpleScene("Act 5", this));
+			this.addContainer(new SimpleScene("Act 6", this));
+			this.addContainer(new SimpleScene("Act 7", this));
+			this.addContainer(new SimpleScene("Closing Act", this));
+		} catch (ContainerImplementationException e) {
+			e.getMessage();
+			e.printStackTrace();
+		}
+	}
 
     
 

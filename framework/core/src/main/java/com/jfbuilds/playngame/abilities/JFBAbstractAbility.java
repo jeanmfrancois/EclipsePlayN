@@ -3,8 +3,11 @@
  */
 package com.jfbuilds.playngame.abilities;
 
+import java.util.HashSet;
+
 import com.jfbuilds.playngame.general.JFBActionInterface;
 import com.jfbuilds.playngame.general.JFBConditionInterface;
+import com.jfbuilds.playngame.general.JFBContainerInterface;
 import com.jfbuilds.playngame.general.JFBDisplayInterface;
 import com.jfbuilds.playngame.general.JFBEventBindsInterface;
 import com.jfbuilds.playngame.general.JFBResetInterface;
@@ -14,6 +17,43 @@ import com.jfbuilds.playngame.general.JFBResetInterface;
  *
  */
 public abstract class JFBAbstractAbility implements JFBAbilityInterface {
+	private JFBContainerInterface parent;
+
+	/* (non-Javadoc)
+	 * @see com.jfbuilds.playngame.abilities.JFBAbilityInterface#setParent(com.jfbuilds.playngame.general.JFBContainerInterface)
+	 */
+	@Override
+	public void setParent(JFBContainerInterface parent_) {
+		parent = parent_;
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see com.jfbuilds.playngame.abilities.JFBAbilityInterface#parent()
+	 */
+	@Override
+	public JFBContainerInterface parent() {
+		return parent;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.jfbuilds.playngame.abilities.JFBAbilityInterface#getAbilityFamily()
+	 */
+	@Override
+	public HashSet<? extends JFBAbilityInterface> getAbilityFamily() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	/* (non-Javadoc)
+	 * @see com.jfbuilds.playngame.abilities.JFBAbilityInterface#setAbilityFamily(java.util.HashSet)
+	 */
+	@Override
+	public void setAbilityFamily(HashSet<? extends JFBAbilityInterface> abilityFamily_) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	/* (non-Javadoc)
 	 * @see com.jfbuilds.playngame.abilities.JFBAbilityInterface#isActivated()
 	 */
