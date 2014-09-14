@@ -11,7 +11,6 @@ import playn.core.Layer;
 import com.jfbuilds.playngame.abilities.JFBAbilityInterface;
 import com.jfbuilds.playngame.exceptions.AbilityImplementationException;
 import com.jfbuilds.playngame.exceptions.ContainerImplementationException;
-import com.jfbuilds.playngame.exceptions.InvalidSetGetException;
 import com.jfbuilds.playngame.exceptions.ObjectiveImplementationException;
 import com.jfbuilds.playngame.objectives.JFBObjectiveInterface;
 
@@ -20,197 +19,195 @@ import com.jfbuilds.playngame.objectives.JFBObjectiveInterface;
  **/
 public interface JFBContainerInterface {
 
-    /* ===================================== */
-    /* ==         Member Variables        == */
-    /* ===================================== */
-	
-	
+	/* ===================================== */
+	/* == Member Variables == */
+	/* ===================================== */
 
-//    private ArrayList<? extends JFBContainerInterface> containerFamily;
-//
-//    private HashSet<? extends JFBAbilityInterface> abilityFamily;
-//
-//    private HashSet<? extends JFBObjectiveInterface> objectiveFamily;
+	// private ArrayList<? extends JFBContainerInterface> containerFamily;
+	//
+	// private HashSet<? extends JFBAbilityInterface> abilityFamily;
+	//
+	// private HashSet<? extends JFBObjectiveInterface> objectiveFamily;
 
-    /* ===================================== */
-    /* ==         Methods                 == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Methods == */
+	/* ===================================== */
 
-	/** 
-     *    create a new instance
-     **/
-    public void create();
-    
-    /** 
-     *    create a new instance
-     **/
-    public void init();
-
-    /** 
-     *    play current instance
-     **/
-    public void play();
-
-    /**
-     *    change to next instance in container family if allowed
-     **/
-    public void next();
-
-    /**
-     *    pause the current instance
-     **/
-    public void pause();
-
-    /**
-     *    resume the current instance if paused
-     **/
-    public void resume();
-
-    /**
-     *    load an instance from a saved state
-     **/
-    public void load();
-    
-    /**
-     *    save the instance to a saved state
-     **/
-    public void save();
-
-    /**
-     *   destroy the instance and close resources
-     **/
-    public void destroy();
-    
-    /**
-     *   get the parent container
-     **/
-    public JFBContainerInterface parent();
-    
-    /**
-     *   set the parent container
-     **/
-    public void setParent(JFBContainerInterface parent_);
-
-    /**
-     *
-     **/
-    public ArrayList<? extends JFBContainerInterface> getContainerFamily();
-
-    /**
-     *
-     **/
-    public void setContainerFamily(ArrayList<? extends JFBContainerInterface> containerFamily_);
-
-    /**
-     *
-     **/
-    public void addContainer(JFBContainerInterface container_) throws ContainerImplementationException ;
-
-    /**
-     *
-     **/
-    public void removeContainer(JFBContainerInterface container_) ;
-
-    /**
-     *
-     **/
-    public void addAbility(JFBAbilityInterface ability_) throws AbilityImplementationException ;
-
-    /**
-     *
-     **/
-    public void removeAbility(JFBAbilityInterface ability_) ;
-
-    /**
-     *
-     **/
-    public void addObjective(JFBObjectiveInterface objective_) throws ObjectiveImplementationException ;
-
-    /**
-     *
-     **/
-    public void removeObjective(JFBObjectiveInterface objective_) ;
-
-    /**
-     *
-     **/
-    public boolean isContainerCandidate(JFBContainerInterface candidate) ;
-    
-    /** 
-     *    set base groupLayer for container visuals
-     **/
-    public void setBase(GroupLayer layer);
-    
-    /** 
-     *    get base GroupLayer for container visuals
-     **/
-    public GroupLayer getBase();
-    
-    /** 
-     *    print info for layer composition
-     **/
-    public void printBaseInfo();
-    
-    /** 
-     *    add a layer from base
-     **/
-    public Layer addLayer(Layer layer);
-    
-    /** 
-     *    remove a layer from base
-     **/
-    public Layer removeLayer();
-    
-    /** 
-     *    get name of container
-     **/
-    public String getName();
-    
-    /** 
-     *    set name of container
-     **/
-    public void setName(String name);
-    
-    /** 
-     *    initialize the base to root or groupLayer
-     **/
-    public void initBase();
-
-	int getContentIndex();
-
-	void setContentIndex(int contentIndex_);
-	
 	/**
-	 * @return the containers
-	 */
-	public ArrayList<JFBContainerInterface> getContainers() ;
-	
+	 *
+	 **/
+	public void addAbility(JFBAbilityInterface ability_) throws AbilityImplementationException;
+
 	/**
-	 * @param containers the containers to set
-	 */
-	public void setContainers(ArrayList<JFBContainerInterface> containers) ;
-	
+	 *
+	 **/
+	public void addContainer(JFBContainerInterface container_) throws ContainerImplementationException;
+
+	/**
+	 * add a layer from base
+	 **/
+	public Layer addLayer(Layer layer);
+
+	/**
+	 *
+	 **/
+	public void addObjective(JFBObjectiveInterface objective_) throws ObjectiveImplementationException;
+
+	/**
+	 * create a new instance
+	 **/
+	public void create();
+
+	/**
+	 * destroy the instance and close resources
+	 **/
+	public void destroy();
+
 	/**
 	 * @return the abilities
 	 */
-	public HashSet<JFBAbilityInterface> getAbilities() ;
-	
+	public HashSet<JFBAbilityInterface> getAbilities();
+
 	/**
-	 * @param abilities the abilities to set
+	 * get base GroupLayer for container visuals
+	 **/
+	public GroupLayer getBase();
+
+	/**
+	 *
+	 **/
+	public ArrayList<? extends JFBContainerInterface> getContainerFamily();
+
+	/**
+	 * @return the containers
 	 */
-	public void setAbilities(HashSet<JFBAbilityInterface> abilities) ;
-	
+	public ArrayList<JFBContainerInterface> getContainers();
+
+	int getContentIndex();
+
+	/**
+	 * get name of container
+	 **/
+	public String getName();
+
 	/**
 	 * @return the objectives
 	 */
 	public HashSet<JFBObjectiveInterface> getObjectives();
-	
+
 	/**
-	 * @param objectives the objectives to set
+	 * create a new instance
+	 **/
+	public void init();
+
+	/**
+	 * initialize the base to root or groupLayer
+	 **/
+	public void initBase();
+
+	/**
+	 *
+	 **/
+	public boolean isContainerCandidate(JFBContainerInterface candidate);
+
+	/**
+	 * load an instance from a saved state
+	 **/
+	public void load();
+
+	/**
+	 * change to next instance in container family if allowed
+	 **/
+	public void next();
+
+	/**
+	 * get the parent container
+	 **/
+	public JFBContainerInterface parent();
+
+	/**
+	 * pause the current instance
+	 **/
+	public void pause();
+
+	/**
+	 * play current instance
+	 **/
+	public void play();
+
+	/**
+	 * print info for layer composition
+	 **/
+	public void printBaseInfo();
+
+	/**
+	 *
+	 **/
+	public void removeAbility(JFBAbilityInterface ability_);
+
+	/**
+	 *
+	 **/
+	public void removeContainer(JFBContainerInterface container_);
+
+	/**
+	 * remove a layer from base
+	 **/
+	public Layer removeLayer();
+
+	/**
+	 *
+	 **/
+	public void removeObjective(JFBObjectiveInterface objective_);
+
+	/**
+	 * resume the current instance if paused
+	 **/
+	public void resume();
+
+	/**
+	 * save the instance to a saved state
+	 **/
+	public void save();
+
+	/**
+	 * @param abilities
+	 *            the abilities to set
 	 */
-	public void setObjectives(HashSet<JFBObjectiveInterface> objectives) ;
-    
-    
-    
+	public void setAbilities(HashSet<JFBAbilityInterface> abilities);
+
+	/**
+	 * set base groupLayer for container visuals
+	 **/
+	public void setBase(GroupLayer layer);
+
+	/**
+	 *
+	 **/
+	public void setContainerFamily(ArrayList<? extends JFBContainerInterface> containerFamily_);
+
+	/**
+	 * @param containers
+	 *            the containers to set
+	 */
+	public void setContainers(ArrayList<JFBContainerInterface> containers);
+
+	void setContentIndex(int contentIndex_);
+
+	/**
+	 * set name of container
+	 **/
+	public void setName(String name);
+
+	/**
+	 * @param objectives
+	 *            the objectives to set
+	 */
+	public void setObjectives(HashSet<JFBObjectiveInterface> objectives);
+
+	/**
+	 * set the parent container
+	 **/
+	public void setParent(JFBContainerInterface parent_);
 
 }

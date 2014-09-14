@@ -8,7 +8,7 @@ public class OpeningActScene extends SimpleScene implements JFBContainerInterfac
 		super(name_, parent_);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Override
 	public void create() {
 		this.addImageLayer("images/opening_act.png");

@@ -7,13 +7,15 @@ package com.jfbuilds.playngame.general;
  **/
 public abstract class JFBAbstractDisplay implements JFBDisplayInterface {
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 *
 	 * @see com.jfbuilds.playngame.general.JFBDisplayInterface#paint(int)
 	 */
 	@Override
 	public void paint(int zIndex) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

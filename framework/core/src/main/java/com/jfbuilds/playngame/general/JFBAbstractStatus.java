@@ -16,7 +16,7 @@ public abstract class JFBAbstractStatus implements JFBStatusInterface {
 	@Override
 	public void setStatus(String status_) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

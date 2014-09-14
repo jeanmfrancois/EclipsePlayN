@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.jfbuilds.playngame.general;
 
@@ -9,11 +9,11 @@ package com.jfbuilds.playngame.general;
  */
 public class SuperCollection extends SimpleCollection implements JFBContainerCollectionInterface {
 
-//	private String headOfFamily;
-//	private ArrayList<SuperCollection> myFamily;
-	
+	// private String headOfFamily;
+	// private ArrayList<SuperCollection> myFamily;
+
 	/**
-	 * 
+	 *
 	 */
 	public SuperCollection() {
 		// TODO Auto-generated constructor stub
@@ -28,24 +28,32 @@ public class SuperCollection extends SimpleCollection implements JFBContainerCol
 		// TODO Auto-generated constructor stub
 	}
 
-	/* (non-Javadoc)
-	 * @see com.jfbuilds.playngame.general.SimpleCollection#createFamily(java.lang.String[])
+	@Override
+	public void addMember(String name) {
+		// myFamily.add((SuperCollection)member);
+
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.jfbuilds.playngame.general.SimpleCollection#addMember(com.jfbuilds
+	 * .playngame.general.JFBContainerCollectionInterface)
+	 */
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.jfbuilds.playngame.general.SimpleCollection#createFamily(java.lang
+	 * .String[])
 	 */
 	@Override
 	public void createFamily(String... members) {
 		for (int i = 0; i < members.length; i++) {
 			this.addMember(members[i]);
 		}
-
-	}
-
-	/* (non-Javadoc)
-	 * @see com.jfbuilds.playngame.general.SimpleCollection#addMember(com.jfbuilds.playngame.general.JFBContainerCollectionInterface)
-	 */
-	
-	public void addMember(String name) {
-		//myFamily.add((SuperCollection)member);
-		
 
 	}
 

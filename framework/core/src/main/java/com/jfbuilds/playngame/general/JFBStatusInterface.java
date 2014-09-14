@@ -7,24 +7,24 @@ package com.jfbuilds.playngame.general;
  **/
 public interface JFBStatusInterface {
 
-    /* ===================================== */
-    /* ==         Member Variables        == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Member Variables == */
+	/* ===================================== */
 
-//    private String  status;
+	// private String status;
 
-    /* ===================================== */
-    /* ==         Methods                 == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Methods == */
+	/* ===================================== */
 
-    /**
-     *
-     **/
-    public String getStatus() ;
+	/**
+	 *
+	 **/
+	public String getStatus();
 
-    /**
-     *
-     **/
-    public void setStatus(String  status_) ;
+	/**
+	 *
+	 **/
+	public void setStatus(String status_);
 
 }

@@ -9,13 +9,17 @@ import java.util.EventObject;
  **/
 public abstract class JFBAbstractCondition implements JFBConditionInterface {
 
-	/* (non-Javadoc)
-	 * @see com.jfbuilds.playngame.general.JFBConditionInterface#evaluate(java.util.EventObject)
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.jfbuilds.playngame.general.JFBConditionInterface#evaluate(java.util
+	 * .EventObject)
 	 */
 	@Override
 	public void evaluate(EventObject event) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

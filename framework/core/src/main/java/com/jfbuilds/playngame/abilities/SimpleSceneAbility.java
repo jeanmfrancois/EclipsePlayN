@@ -14,27 +14,9 @@ import com.jfbuilds.playngame.general.JFBResetInterface;
 public class SimpleSceneAbility extends JFBAbstractSceneAbility implements JFBSceneAbilityInterface {
 
 	@Override
-	public boolean isActivated() {
+	public JFBActionInterface getAction() {
 		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void setActivated(boolean activated_) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public int getValue() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void setValue(int value_) {
-		// TODO Auto-generated method stub
-		
+		return null;
 	}
 
 	@Override
@@ -44,45 +26,9 @@ public class SimpleSceneAbility extends JFBAbstractSceneAbility implements JFBSc
 	}
 
 	@Override
-	public void setCondition(JFBConditionInterface condition_) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public JFBActionInterface getAction() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setAction(JFBActionInterface action_) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public JFBDisplayInterface getDisplay() {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	@Override
-	public void setDisplay(JFBDisplayInterface display_) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public JFBResetInterface getReset() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setReset(JFBResetInterface reset_) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -92,15 +38,69 @@ public class SimpleSceneAbility extends JFBAbstractSceneAbility implements JFBSc
 	}
 
 	@Override
-	public void setEventBinds(JFBEventBindsInterface eventBinds_) {
+	public JFBResetInterface getReset() {
 		// TODO Auto-generated method stub
-		
+		return null;
+	}
+
+	@Override
+	public int getValue() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
 	public boolean isAbilityCandidate(JFBAbilityInterface candidate) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public boolean isActivated() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void setAction(JFBActionInterface action_) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setActivated(boolean activated_) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setCondition(JFBConditionInterface condition_) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setDisplay(JFBDisplayInterface display_) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setEventBinds(JFBEventBindsInterface eventBinds_) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setReset(JFBResetInterface reset_) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setValue(int value_) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

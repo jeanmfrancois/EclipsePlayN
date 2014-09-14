@@ -2,7 +2,6 @@
 
 package com.jfbuilds.playngame.exceptions;
 
-import java.lang.Exception;
 import java.io.Serializable;
 
 /**
@@ -11,7 +10,7 @@ import java.io.Serializable;
 public class JFBException extends Exception implements Serializable {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = -4539486425174644358L;
 

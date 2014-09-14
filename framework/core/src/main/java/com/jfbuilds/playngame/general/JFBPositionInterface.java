@@ -7,96 +7,96 @@ package com.jfbuilds.playngame.general;
  **/
 public interface JFBPositionInterface {
 
-    /* ===================================== */
-    /* ==         Member Variables        == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Member Variables == */
+	/* ===================================== */
 
-//    private float xPostion;
-//
-//    private float yPosition;
-//
-//    private float zPosition;
-//
-//    private float xScale;
-//
-//    private float yScale;
-//
-//    private float zScale;
-//
-//    private float alpha;
+	// private float xPostion;
+	//
+	// private float yPosition;
+	//
+	// private float zPosition;
+	//
+	// private float xScale;
+	//
+	// private float yScale;
+	//
+	// private float zScale;
+	//
+	// private float alpha;
 
-    /* ===================================== */
-    /* ==         Methods                 == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Methods == */
+	/* ===================================== */
 
-    /**
-     *
-     **/
-    public float getXPostion();
+	/**
+	 *
+	 **/
+	public float getAlpha();
 
-    /**
-     *
-     **/
-    public void setXPostion(float xPostion_);
+	/**
+	 *
+	 **/
+	public float getXPostion();
 
-    /**
-     *
-     **/
-    public float getYPosition();
+	/**
+	 *
+	 **/
+	public float getXScale();
 
-    /**
-     *
-     **/
-    public void setYPosition(float yPosition_);
+	/**
+	 *
+	 **/
+	public float getYPosition();
 
-    /**
-     *
-     **/
-    public float getZPosition();
+	/**
+	 *
+	 **/
+	public float getYScale();
 
-    /**
-     *
-     **/
-    public void setZPosition(float zPosition_);
+	/**
+	 *
+	 **/
+	public float getZPosition();
 
-    /**
-     *
-     **/
-    public float getXScale();
+	/**
+	 *
+	 **/
+	public float getZScale();
 
-    /**
-     *
-     **/
-    public void setXScale(float xScale_);
+	/**
+	 *
+	 **/
+	public void setAlpha(float alpha_);
 
-    /**
-     *
-     **/
-    public float getYScale();
+	/**
+	 *
+	 **/
+	public void setXPostion(float xPostion_);
 
-    /**
-     *
-     **/
-    public void setYScale(float yScale_);
+	/**
+	 *
+	 **/
+	public void setXScale(float xScale_);
 
-    /**
-     *
-     **/
-    public float getZScale();
+	/**
+	 *
+	 **/
+	public void setYPosition(float yPosition_);
 
-    /**
-     *
-     **/
-    public void setZScale(float zScale_);
+	/**
+	 *
+	 **/
+	public void setYScale(float yScale_);
 
-    /**
-     *
-     **/
-    public float getAlpha();
+	/**
+	 *
+	 **/
+	public void setZPosition(float zPosition_);
 
-    /**
-     *
-     **/
-    public void setAlpha(float alpha_);
+	/**
+	 *
+	 **/
+	public void setZScale(float zScale_);
 
 }

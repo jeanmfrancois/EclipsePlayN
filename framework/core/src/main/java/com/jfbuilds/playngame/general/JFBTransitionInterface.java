@@ -7,58 +7,58 @@ package com.jfbuilds.playngame.general;
  **/
 public interface JFBTransitionInterface {
 
-    /* ===================================== */
-    /* ==         Member Variables        == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Member Variables == */
+	/* ===================================== */
 
-//    private boolean transitionPresent;
-//
-//    private int durationInMilliSeconds;
-//
-//    private int steps;
+	// private boolean transitionPresent;
+	//
+	// private int durationInMilliSeconds;
+	//
+	// private int steps;
 
-    /* ===================================== */
-    /* ==         Methods                 == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Methods == */
+	/* ===================================== */
 
-    /**
-     *
-     **/
-    public boolean hasTransition() ;
+	/**
+	 *
+	 **/
+	public int getDurationInMilliSeconds();
 
-    /**
-     *
-     **/
-    public void setTransition(boolean transitionPresent_) ;
+	/**
+	 *
+	 **/
+	public int getSteps();
 
-    /**
-     *
-     **/
-    public int getDurationInMilliSeconds() ;
+	/**
+	 *
+	 **/
+	public boolean hasTransition();
 
-    /**
-     *
-     **/
-    public void setDurationInMilliSeconds(int durationInMilliSeconds_) ;
-    
-    /**
-     *
-     **/
-    public void transitionIn() ;
+	/**
+	 *
+	 **/
+	public void setDurationInMilliSeconds(int durationInMilliSeconds_);
 
-    /**
-     *
-     **/
-    public void transitionOut() ;
+	/**
+	 *
+	 **/
+	public void setSteps(int steps_);
 
-    /**
-     *
-     **/
-    public int getSteps() ;
+	/**
+	 *
+	 **/
+	public void setTransition(boolean transitionPresent_);
 
-    /**
-     *
-     **/
-    public void setSteps(int steps_) ;
+	/**
+	 *
+	 **/
+	public void transitionIn();
+
+	/**
+	 *
+	 **/
+	public void transitionOut();
 
 }

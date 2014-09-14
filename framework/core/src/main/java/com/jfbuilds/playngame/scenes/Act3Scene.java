@@ -8,7 +8,7 @@ public class Act3Scene extends SimpleScene implements JFBContainerInterface, JFB
 		super(name_, parent_);
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Override
 	public void create() {
 		this.addImageLayer("images/act_3.png");

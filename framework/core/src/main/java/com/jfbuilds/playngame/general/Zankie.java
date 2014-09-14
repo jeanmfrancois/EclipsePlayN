@@ -2,11 +2,6 @@
 
 package com.jfbuilds.playngame.general;
 
-import static playn.core.PlayN.assets;
-import static playn.core.PlayN.graphics;
-
-import java.util.ArrayList;
-
 import com.jfbuilds.playngame.exceptions.ContainerImplementationException;
 import com.jfbuilds.playngame.scenes.Act1Scene;
 import com.jfbuilds.playngame.scenes.Act2Scene;
@@ -17,11 +12,6 @@ import com.jfbuilds.playngame.scenes.Act6Scene;
 import com.jfbuilds.playngame.scenes.Act7Scene;
 import com.jfbuilds.playngame.scenes.ClosingActScene;
 import com.jfbuilds.playngame.scenes.OpeningActScene;
-import com.jfbuilds.playngame.scenes.SimpleScene;
-
-import playn.core.GroupLayer;
-import playn.core.Image;
-import playn.core.ImageLayer;
 
 /**
  *
@@ -32,15 +22,9 @@ public class Zankie extends SimpleGame {
 		super(33);
 		System.out.println("Game created..");
 	}
-	
+
 	@Override
-	public void init() {
-		super.init();
-		setName("Zankie GameOn!");
-		System.out.print("Zankie is On!!! ");
-	}
-@Override
-public void createScenes() {
+	public void createScenes() {
 
 		try {
 			this.addContainer(new OpeningActScene("Opening Act", this));
@@ -58,6 +42,12 @@ public void createScenes() {
 		}
 	}
 
+	@Override
+	public void init() {
+		super.init();
+		setName("Zankie GameOn!");
+		System.out.print("Zankie is On!!! ");
+	}
 
 	@Override
 	public void paint(float alpha) {

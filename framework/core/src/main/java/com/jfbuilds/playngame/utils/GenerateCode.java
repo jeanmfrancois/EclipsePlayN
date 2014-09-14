@@ -10,10 +10,13 @@ import playn.core.TextFormat;
 import playn.core.TextLayout;
 
 public class GenerateCode {
-	public static void sampleInit(){
-		performAction();
+	protected static Layer createTextLayer(TextLayout layout, int color) {
+		CanvasImage image = graphics().createImage((int) Math.ceil(layout.width()), (int) Math.ceil(layout.height()));
+		image.canvas().setFillColor(color);
+		image.canvas().fillText(layout, 0, 0);
+		return graphics().createImageLayer(image);
 	}
-	
+
 	public static void performAction() {
 		GroupLayer base = graphics().createGroupLayer();
 		graphics().rootLayer().add(base);
@@ -40,8 +43,7 @@ public class GenerateCode {
 				for (float size : new float[] { 12f, 24f, 32f }) {
 					Font font = graphics().createFont(name, style, size);
 					TextFormat format = new TextFormat().withFont(font);
-					TextLayout layout = graphics().layoutText(
-							"Hello JF Builds PlayN World", format);
+					TextLayout layout = graphics().layoutText("Hello JF Builds PlayN World", format);
 					Layer layer = createTextLayer(layout, 0xFF000000);
 					layer.setTranslation(xpos, ypos);
 					base.add(layer);
@@ -52,18 +54,12 @@ public class GenerateCode {
 			}
 			xpos += (maxWidth + MARGIN);
 		}
-		
+
 		System.out.print("Test Complete");
 	}
-	
-	protected static Layer createTextLayer(TextLayout layout, int color) {
-		CanvasImage image = graphics().createImage(
-				(int) Math.ceil(layout.width()),
-				(int) Math.ceil(layout.height()));
-		image.canvas().setFillColor(color);
-		image.canvas().fillText(layout, 0, 0);
-		return graphics().createImageLayer(image);
+
+	public static void sampleInit() {
+		performAction();
 	}
-	
-	
+
 }

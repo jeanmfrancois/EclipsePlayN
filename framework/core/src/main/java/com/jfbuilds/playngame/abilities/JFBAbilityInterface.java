@@ -16,122 +16,121 @@ import com.jfbuilds.playngame.general.JFBResetInterface;
  **/
 public interface JFBAbilityInterface {
 
-    /* ===================================== */
-    /* ==         Member Variables        == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Member Variables == */
+	/* ===================================== */
 
-//    boolean activated = false;
-//
-//    int value = 0;
-//
-//    JFBEventBindsInterface eventBinds = null;
-//
-//    JFBConditionInterface condition = null;
-//
-//    JFBActionInterface action = null;
-//
-//    JFBDisplayInterface display = null;
-//
-//    JFBResetInterface reset = null;
+	// boolean activated = false;
+	//
+	// int value = 0;
+	//
+	// JFBEventBindsInterface eventBinds = null;
+	//
+	// JFBConditionInterface condition = null;
+	//
+	// JFBActionInterface action = null;
+	//
+	// JFBDisplayInterface display = null;
+	//
+	// JFBResetInterface reset = null;
 
-    /* ===================================== */
-    /* ==         Methods                 == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Methods == */
+	/* ===================================== */
 
-    /**
-     *
-     **/
-    public boolean isActivated() ;
+	/**
+	 *
+	 **/
+	public HashSet<? extends JFBAbilityInterface> getAbilityFamily();
 
-    /**
-     *
-     **/
-    public void setActivated(boolean activated_) ;
+	/**
+	 *
+	 **/
+	public JFBActionInterface getAction();
 
-    /**
-     *
-     **/
-    public int getValue() ;
+	/**
+	 *
+	 **/
+	public JFBConditionInterface getCondition();
 
-    /**
-     *
-     **/
-    public void setValue(int value_) ;
+	/**
+	 *
+	 **/
+	public JFBDisplayInterface getDisplay();
 
-    /**
-     *
-     **/
-    public JFBConditionInterface getCondition() ;
+	/**
+	 *
+	 **/
+	public JFBEventBindsInterface getEventBinds();
 
-    /**
-     *
-     **/
-    public void setCondition(JFBConditionInterface condition_) ;
+	/**
+	 *
+	 **/
+	public JFBResetInterface getReset();
 
-    /**
-     *
-     **/
-    public JFBActionInterface getAction() ;
+	/**
+	 *
+	 **/
+	public int getValue();
 
-    /**
-     *
-     **/
-    public void setAction(JFBActionInterface action_) ;
+	/**
+	 *
+	 **/
+	public boolean isAbilityCandidate(JFBAbilityInterface candidate);
 
-    /**
-     *
-     **/
-    public JFBDisplayInterface getDisplay() ;
+	/**
+	 *
+	 **/
+	public boolean isActivated();
 
-    /**
-     *
-     **/
-    public void setDisplay(JFBDisplayInterface display_) ;
+	/**
+	 *
+	 **/
+	public JFBContainerInterface parent();
 
-    /**
-     *
-     **/
-    public JFBResetInterface getReset() ;
+	/**
+	 *
+	 **/
+	public void setAbilityFamily(HashSet<? extends JFBAbilityInterface> abilityFamily_);
 
-    /**
-     *
-     **/
-    public void setReset(JFBResetInterface reset_) ;
+	/**
+	 *
+	 **/
+	public void setAction(JFBActionInterface action_);
 
-    /**
-     *
-     **/
-    public JFBEventBindsInterface getEventBinds() ;
+	/**
+	 *
+	 **/
+	public void setActivated(boolean activated_);
 
-    /**
-     *
-     **/
-    public void setEventBinds(JFBEventBindsInterface eventBinds_) ;
+	/**
+	 *
+	 **/
+	public void setCondition(JFBConditionInterface condition_);
 
-    /**
-     *
-     **/
-    public boolean isAbilityCandidate(JFBAbilityInterface candidate) ;
-    
-    /**
-    *
-    **/
-   public HashSet<? extends JFBAbilityInterface> getAbilityFamily() ;
+	/**
+	 *
+	 **/
+	public void setDisplay(JFBDisplayInterface display_);
 
-   /**
-   *
-   **/
-  public void setAbilityFamily(HashSet<? extends JFBAbilityInterface> abilityFamily_) ;
-  
-  /**
-  *
-  **/
- public void setParent(JFBContainerInterface parent_) ;
- 
- /**
- *
- **/
- public JFBContainerInterface parent() ;
-    
+	/**
+	 *
+	 **/
+	public void setEventBinds(JFBEventBindsInterface eventBinds_);
+
+	/**
+	 *
+	 **/
+	public void setParent(JFBContainerInterface parent_);
+
+	/**
+	 *
+	 **/
+	public void setReset(JFBResetInterface reset_);
+
+	/**
+	 *
+	 **/
+	public void setValue(int value_);
 
 }

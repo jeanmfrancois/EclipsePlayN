@@ -6,5 +6,5 @@ package com.jfbuilds.playngame.abilities;
  *
  **/
 public abstract class JFBAbstractSceneAbility extends JFBAbstractAbility implements JFBSceneAbilityInterface {
-	
+
 }

@@ -7,13 +7,15 @@ package com.jfbuilds.playngame.general;
  **/
 public abstract class JFBAbstractAction implements JFBActionInterface {
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 *
 	 * @see com.jfbuilds.playngame.general.JFBActionInterface#execute()
 	 */
 	@Override
 	public void execute() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

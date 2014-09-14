@@ -5,6 +5,7 @@ package com.jfbuilds.playngame.objectives;
 /**
  *
  **/
-public abstract class JFBAbstractFragmentObjective extends JFBAbstractObjective implements JFBFragmentObjectiveInterface {
+public abstract class JFBAbstractFragmentObjective extends JFBAbstractObjective implements
+JFBFragmentObjectiveInterface {
 
 }

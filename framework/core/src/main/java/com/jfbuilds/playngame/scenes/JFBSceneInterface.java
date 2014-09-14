@@ -15,60 +15,60 @@ import com.jfbuilds.playngame.objectives.JFBSceneObjectiveInterface;
  **/
 public interface JFBSceneInterface extends JFBContainerInterface {
 
-    /* ===================================== */
-    /* ==         Member Variables        == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Member Variables == */
+	/* ===================================== */
 
-//    private ArrayList<JFBSceneObjectiveInterface> sceneObjectives;
-//
-//    private ArrayList<JFBSceneAbilityInterface> sceneAbilities;
-//
-//    private ArrayList<JFBFragmentInterface> sceneFragments;
-//
-//    private JFBTransitionInterface transition;
+	// private ArrayList<JFBSceneObjectiveInterface> sceneObjectives;
+	//
+	// private ArrayList<JFBSceneAbilityInterface> sceneAbilities;
+	//
+	// private ArrayList<JFBFragmentInterface> sceneFragments;
+	//
+	// private JFBTransitionInterface transition;
 
-    /* ===================================== */
-    /* ==         Methods                 == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Methods == */
+	/* ===================================== */
 
-    /**
-     *
-     **/
-    public ArrayList<JFBSceneObjectiveInterface> getSceneObjectives() ;
+	/**
+	 *
+	 **/
+	public ArrayList<JFBSceneAbilityInterface> getSceneAbilities();
 
-    /**
-     *
-     **/
-    public void setSceneObjectives(ArrayList<JFBSceneObjectiveInterface> sceneObjectives_);
+	/**
+	 *
+	 **/
+	public ArrayList<JFBFragmentInterface> getSceneFragments();
 
-    /**
-     *
-     **/
-    public ArrayList<JFBFragmentInterface> getSceneFragments();
+	/**
+	 *
+	 **/
+	public ArrayList<JFBSceneObjectiveInterface> getSceneObjectives();
 
-    /**
-     *
-     **/
-    public void setSceneFragments(ArrayList<JFBFragmentInterface> sceneFragments_);
+	/**
+	 *
+	 **/
+	public JFBTransitionInterface getTransition();
 
-    /**
-     *
-     **/
-    public ArrayList<JFBSceneAbilityInterface> getSceneAbilities();
+	/**
+	 *
+	 **/
+	public void setSceneAbilities(ArrayList<JFBSceneAbilityInterface> sceneAbilities_);
 
-    /**
-     *
-     **/
-    public void setSceneAbilities(ArrayList<JFBSceneAbilityInterface> sceneAbilities_);
+	/**
+	 *
+	 **/
+	public void setSceneFragments(ArrayList<JFBFragmentInterface> sceneFragments_);
 
-    /**
-     *
-     **/
-    public JFBTransitionInterface getTransition();
+	/**
+	 *
+	 **/
+	public void setSceneObjectives(ArrayList<JFBSceneObjectiveInterface> sceneObjectives_);
 
-    /**
-     *
-     **/
-    public void setTransition(JFBTransitionInterface transition_);
+	/**
+	 *
+	 **/
+	public void setTransition(JFBTransitionInterface transition_);
 
 }

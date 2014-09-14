@@ -10,7 +10,7 @@ public abstract class JFBAbstractReset implements JFBResetInterface {
 	@Override
 	public void reset(JFBContainerInterface parent) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

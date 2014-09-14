@@ -12,5 +12,5 @@ public class HiddenObjectsStage extends SimpleStageScene implements JFBSceneInte
 	public HiddenObjectsStage(String name_, JFBContainerInterface parent_) {
 		super(name_, parent_);
 	}
-	
+
 }

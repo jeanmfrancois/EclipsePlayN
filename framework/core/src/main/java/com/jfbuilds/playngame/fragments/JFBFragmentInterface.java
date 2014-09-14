@@ -13,139 +13,134 @@ import com.jfbuilds.playngame.general.JFBTransitionInterface;
  *
  **/
 public interface JFBFragmentInterface extends JFBContainerInterface {
-	
-	
-    /* ===================================== */
-    /* ==        FragmentType enum        == */
-    /* ===================================== */
-	
+
+	/* ===================================== */
+	/* == FragmentType enum == */
+	/* ===================================== */
+
 	public enum FragmentType {
-		SIMPLE_FRAGMENT (1000, true, 100114),
-		CONTROLABLE_CHARACTER (2000, false, 100114),
-		NONCONTROLABLE_CHARACTER (2010, true, 100114),
-		BACKGROUND_LAYER (3000, false, 100114),
-		FORGROUND_LAYER (3010, false, 100114),
-		WALKABLE_MAP  (4000, false, 100114),
-		SWIMMABLE_MAP (4050, false, 100114);
-		
+		SIMPLE_FRAGMENT(1000, true, 100114), CONTROLABLE_CHARACTER(2000, false, 100114), NONCONTROLABLE_CHARACTER(2010,
+				true, 100114), BACKGROUND_LAYER(3000, false, 100114), FORGROUND_LAYER(3010, false, 100114), WALKABLE_MAP(
+						4000, false, 100114), SWIMMABLE_MAP(4050, false, 100114);
+
 		private final int id;
 		private final boolean multipleAllowed;
 		private final int creationStamp;
-		
+
 		FragmentType(int id_, boolean multipleAllowed_, int creationStamp_) {
 			id = id_;
 			multipleAllowed = multipleAllowed_;
 			creationStamp = creationStamp_;
 		}
-		
-		public int id() {
-			return id;
-		}
-		
-		public boolean multipleAllowed() {
-			return multipleAllowed;
-		}
-		
+
 		public int creationStamp() {
 			return creationStamp;
 		}
-		
+
+		public int id() {
+			return id;
+		}
+
+		public boolean multipleAllowed() {
+			return multipleAllowed;
+		}
+
+		@Override
 		public String toString() {
 			return String.valueOf(multipleAllowed());
 		}
 	}
-	
-	
-    /* ===================================== */
-    /* ==         Member Variables        == */
-    /* ===================================== */
 
-//    FragmentType fragmentType = FragmentType.SIMPLE_FRAGMENT;
-//
-//    JFBPositionInterface startPosition = null;
-//
-//    JFBPositionInterface endPostion = null;
-//
-//    JFBTransitionInterface transition = null;
-//
-//    JFBActionInterface action = null;
-//
-//    JFBConditionInterface condition = null;
-//
-//    JFBEventBindsInterface eventBinds = null;
+	/* ===================================== */
+	/* == Member Variables == */
+	/* ===================================== */
 
-    /* ===================================== */
-    /* ==         Methods                 == */
-    /* ===================================== */
+	// FragmentType fragmentType = FragmentType.SIMPLE_FRAGMENT;
+	//
+	// JFBPositionInterface startPosition = null;
+	//
+	// JFBPositionInterface endPostion = null;
+	//
+	// JFBTransitionInterface transition = null;
+	//
+	// JFBActionInterface action = null;
+	//
+	// JFBConditionInterface condition = null;
+	//
+	// JFBEventBindsInterface eventBinds = null;
 
-    /**
-     *
-     **/
-    public FragmentType getFragmentType();
+	/* ===================================== */
+	/* == Methods == */
+	/* ===================================== */
 
-    /**
-     *
-     **/
-    public void setFragmentType(FragmentType fragmentType_);
+	/**
+	 *
+	 **/
+	public JFBActionInterface getAction();
 
-    /**
-     *
-     **/
-    public JFBPositionInterface getStartPosition();
+	/**
+	 *
+	 **/
+	public JFBConditionInterface getCondition();
 
-    /**
-     *
-     **/
-    public void setStartPosition(JFBPositionInterface startPosition_);
+	/**
+	 *
+	 **/
+	public JFBPositionInterface getEndPostion();
 
-    /**
-     *
-     **/
-    public JFBPositionInterface getEndPostion();
+	/**
+	 *
+	 **/
+	public JFBEventBindsInterface getEventBinds();
 
-    /**
-     *
-     **/
-    public void setEndPostion(JFBPositionInterface endPostion_);
+	/**
+	 *
+	 **/
+	public FragmentType getFragmentType();
 
-    /**
-     *
-     **/
-    public JFBTransitionInterface getTransition();
+	/**
+	 *
+	 **/
+	public JFBPositionInterface getStartPosition();
 
-    /**
-     *
-     **/
-    public void setTransition(JFBTransitionInterface transition_);
+	/**
+	 *
+	 **/
+	public JFBTransitionInterface getTransition();
 
-    /**
-     *
-     **/
-    public JFBActionInterface getAction();
+	/**
+	 *
+	 **/
+	public void setAction(JFBActionInterface action_);
 
-    /**
-     *
-     **/
-    public void setAction(JFBActionInterface action_);
+	/**
+	 *
+	 **/
+	public void setCondition(JFBConditionInterface condition_);
 
-    /**
-     *
-     **/
-    public JFBConditionInterface getCondition();
+	/**
+	 *
+	 **/
+	public void setEndPostion(JFBPositionInterface endPostion_);
 
-    /**
-     *
-     **/
-    public void setCondition(JFBConditionInterface condition_);
+	/**
+	 *
+	 **/
+	public void setEventBinds(JFBEventBindsInterface eventBinds_);
 
-    /**
-     *
-     **/
-    public JFBEventBindsInterface getEventBinds();
+	/**
+	 *
+	 **/
+	public void setFragmentType(FragmentType fragmentType_);
 
-    /**
-     *
-     **/
-    public void setEventBinds(JFBEventBindsInterface eventBinds_);
+	/**
+	 *
+	 **/
+	public void setStartPosition(JFBPositionInterface startPosition_);
+
+	/**
+	 *
+	 **/
+	public void setTransition(JFBTransitionInterface transition_);
 
 }

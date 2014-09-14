@@ -9,7 +9,14 @@ import java.io.Serializable;
  **/
 public class JFBImplementationException extends JFBException implements Serializable {
 
-	/* (non-Javadoc)
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -6732563012335118918L;
+
+	/*
+	 * (non-Javadoc)
+	 *
 	 * @see java.lang.Throwable#getMessage()
 	 */
 	@Override
@@ -17,10 +24,5 @@ public class JFBImplementationException extends JFBException implements Serializ
 		// TODO Auto-generated method stub
 		return "Incorrect implementation which violates supporting interface structure";
 	}
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -6732563012335118918L;
 
 }

@@ -2,11 +2,9 @@
 
 package com.jfbuilds.playngame.abilities;
 
-
 /**
  *
  **/
 public class SimpleFragmentAbility extends JFBAbstractFragmentAbility implements JFBFragmentAbilityInterface {
-
 
 }

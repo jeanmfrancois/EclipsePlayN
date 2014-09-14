@@ -7,18 +7,17 @@ package com.jfbuilds.playngame.general;
  **/
 public interface JFBResetInterface {
 
-    /* ===================================== */
-    /* ==         Member Variables        == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Member Variables == */
+	/* ===================================== */
 
+	/* ===================================== */
+	/* == Methods == */
+	/* ===================================== */
 
-    /* ===================================== */
-    /* ==         Methods                 == */
-    /* ===================================== */
-
-    /**
-     *
-     **/
-    public void reset(JFBContainerInterface parent) ;
+	/**
+	 *
+	 **/
+	public void reset(JFBContainerInterface parent);
 
 }

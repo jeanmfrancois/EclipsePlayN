@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.jfbuilds.playngame.scenes;
 
@@ -15,7 +15,7 @@ public class SimpleScene extends JFBAbstractScene implements JFBSceneInterface {
 		setParent(parent_);
 		init();
 	}
-	
+
 	@Override
 	public void create() {
 		this.addImageLayer("images/bg.png");

@@ -8,39 +8,15 @@ package com.jfbuilds.playngame.general;
 public abstract class JFBAbstractPosition implements JFBPositionInterface {
 
 	@Override
+	public float getAlpha() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
 	public float getXPostion() {
 		// TODO Auto-generated method stub
 		return 0;
-	}
-
-	@Override
-	public void setXPostion(float xPostion_) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public float getYPosition() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void setYPosition(float yPosition_) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public float getZPosition() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void setZPosition(float zPosition_) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -50,9 +26,9 @@ public abstract class JFBAbstractPosition implements JFBPositionInterface {
 	}
 
 	@Override
-	public void setXScale(float xScale_) {
+	public float getYPosition() {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
@@ -62,9 +38,9 @@ public abstract class JFBAbstractPosition implements JFBPositionInterface {
 	}
 
 	@Override
-	public void setYScale(float yScale_) {
+	public float getZPosition() {
 		// TODO Auto-generated method stub
-		
+		return 0;
 	}
 
 	@Override
@@ -74,21 +50,45 @@ public abstract class JFBAbstractPosition implements JFBPositionInterface {
 	}
 
 	@Override
-	public void setZScale(float zScale_) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public float getAlpha() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
 	public void setAlpha(float alpha_) {
 		// TODO Auto-generated method stub
-		
+
+	}
+
+	@Override
+	public void setXPostion(float xPostion_) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setXScale(float xScale_) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setYPosition(float yPosition_) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setYScale(float yScale_) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setZPosition(float zPosition_) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setZScale(float zScale_) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

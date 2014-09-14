@@ -2,102 +2,62 @@
 
 package com.jfbuilds.playngame.general;
 
-import java.awt.Graphics;
+import static playn.core.PlayN.assets;
+import static playn.core.PlayN.graphics;
+import static playn.core.PlayN.pointer;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 
 import playn.core.Game;
 import playn.core.GroupLayer;
 import playn.core.Pointer;
-import playn.core.Pointer.Listener;
 import playn.core.Sound;
-import static playn.core.PlayN.*;
 
 import com.jfbuilds.playngame.abilities.JFBAbilityInterface;
 import com.jfbuilds.playngame.abilities.JFBGameAbilityInterface;
-import com.jfbuilds.playngame.abilities.SimpleGameAbility;
-import com.jfbuilds.playngame.exceptions.ContainerImplementationException;
 import com.jfbuilds.playngame.exceptions.ContainerNullPointerException;
 import com.jfbuilds.playngame.exceptions.InvalidSetGetException;
 import com.jfbuilds.playngame.objectives.JFBGameObjectiveInterface;
 import com.jfbuilds.playngame.objectives.JFBObjectiveInterface;
-import com.jfbuilds.playngame.objectives.SimpleGameObjective;
 import com.jfbuilds.playngame.scenes.JFBSceneInterface;
-import com.jfbuilds.playngame.scenes.SimpleScene;
 
 /**
  *
  **/
-public abstract class JFBAbstractGame extends JFBAbstractContainer implements JFBGameInterface, JFBContainerInterface, Game {
+public abstract class JFBAbstractGame extends JFBAbstractContainer implements JFBGameInterface, JFBContainerInterface,
+Game {
 	private GroupLayer base;
 	private ArrayList<? extends JFBGameAbilityInterface> gameAbilities;
 	private ArrayList<? extends JFBGameObjectiveInterface> gameObjectives;
 	private ArrayList<? extends JFBSceneInterface> gameScenes;
 	Sound click;
-	
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see com.jfbuilds.playngame.general.JFBGameInterface#getCurrectScene()
+	 */
+	@Override
+	public abstract void createScenes();
 
 	/**
 	 * @return the base
 	 */
+	@Override
 	public GroupLayer getBase() {
 		return base;
 	}
-	
-	/* (non-Javadoc)
-	 * @see com.jfbuilds.playngame.general.JFBGameInterface#getCurrectScene()
-	 */
-	public void initScenes() {
-		
-		// set the scene index to 0
-		setContentIndex(0);
-		
-		// create the scenes for the game
-		createScenes();
-		
-		// get the current scene 
-		System.out.println("Current Scene is " + getCurrentScene().getName());
-		
-		
-		// set the current scene display
-		setBase(getCurrentScene().getBase());
-		
-		// initialize the base, connecting root to current scene's base
-		initBase();		
-		
 
-		 // add a listener for pointer (mouse, touch) input
-	    pointer().setListener(new Pointer.Adapter() {
-	      @Override
-	      public void onPointerEnd(Pointer.Event event) {
-	        userSelect(event.x(), event.y());
-	      }
-	    });
-	    
-	    click = assets().getSound("sounds/sword-whip-01");
-	    
-	    
-		
-	}
-	
-	public void userSelect(float x, float y) {
-		System.out.println("User has click cordinates: (" + x + ", " + y + ")");
-		click.play();
-		getCurrentScene().next();
-	}
-	
-	
-	/* (non-Javadoc)
-	 * @see com.jfbuilds.playngame.general.JFBGameInterface#getCurrectScene()
-	 */
-	public abstract void createScenes();
-
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 *
 	 * @see com.jfbuilds.playngame.general.JFBGameInterface#getCurrectScene()
 	 */
 	@Override
 	public JFBSceneInterface getCurrentScene() {
 		try {
-			if (this.getGameScenes()!= null) {
+			if (this.getGameScenes() != null) {
 				return (JFBSceneInterface) getGameScenes().get(this.getContentIndex());
 			} else {
 				throw new ContainerNullPointerException();
@@ -110,7 +70,9 @@ public abstract class JFBAbstractGame extends JFBAbstractContainer implements JF
 		return null;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 *
 	 * @see com.jfbuilds.playngame.general.JFBGameInterface#getGameAbilities()
 	 */
 	@Override
@@ -118,7 +80,9 @@ public abstract class JFBAbstractGame extends JFBAbstractContainer implements JF
 		return getAbilities();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 *
 	 * @see com.jfbuilds.playngame.general.JFBGameInterface#getGameObjectives()
 	 */
 	@Override
@@ -126,7 +90,9 @@ public abstract class JFBAbstractGame extends JFBAbstractContainer implements JF
 		return getObjectives();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 *
 	 * @see com.jfbuilds.playngame.general.JFBGameInterface#getGameScenes()
 	 */
 	@Override
@@ -140,7 +106,7 @@ public abstract class JFBAbstractGame extends JFBAbstractContainer implements JF
 		initScenes();
 		setName("Abstract Game!");
 	}
-	
+
 	@Override
 	public void initBase() {
 		// initialize the base layer by setting it to the root
@@ -148,15 +114,56 @@ public abstract class JFBAbstractGame extends JFBAbstractContainer implements JF
 		graphics().rootLayer().add(getBase());
 	}
 
-	/**
-	 * @param base the base to set
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see com.jfbuilds.playngame.general.JFBGameInterface#getCurrectScene()
 	 */
+	@Override
+	public void initScenes() {
+
+		// set the scene index to 0
+		setContentIndex(0);
+
+		// create the scenes for the game
+		createScenes();
+
+		// get the current scene
+		System.out.println("Current Scene is " + getCurrentScene().getName());
+
+		// set the current scene display
+		setBase(getCurrentScene().getBase());
+
+		// initialize the base, connecting root to current scene's base
+		initBase();
+
+		// add a listener for pointer (mouse, touch) input
+		pointer().setListener(new Pointer.Adapter() {
+			@Override
+			public void onPointerEnd(Pointer.Event event) {
+				userSelect(event.x(), event.y());
+			}
+		});
+
+		click = assets().getSound("sounds/sword-whip-01");
+
+	}
+
+	/**
+	 * @param base
+	 *            the base to set
+	 */
+	@Override
 	synchronized public void setBase(GroupLayer base_) {
 		this.base = base_;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.jfbuilds.playngame.general.JFBGameInterface#setCurrectScene(com.jfbuilds.playngame.scenes.JFBSceneInterface)
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.jfbuilds.playngame.general.JFBGameInterface#setCurrectScene(com.jfbuilds
+	 * .playngame.scenes.JFBSceneInterface)
 	 */
 	@Override
 	public void setCurrentScene(JFBSceneInterface currentScene_) {
@@ -168,18 +175,21 @@ public abstract class JFBAbstractGame extends JFBAbstractContainer implements JF
 			System.out.println("Game: Setting current scene");
 			e.printStackTrace();
 		}
-		
+
 	}
 
-
-	/* (non-Javadoc)
-	 * @see com.jfbuilds.playngame.general.JFBGameInterface#setGameAbilities(java.util.ArrayList)
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.jfbuilds.playngame.general.JFBGameInterface#setGameAbilities(java
+	 * .util.ArrayList)
 	 */
 	@Override
 	public void setGameAbilities(HashSet<JFBAbilityInterface> gameAbilities_) {
 		try {
 			throw new InvalidSetGetException();
-			//gameScenes = gameScenes_;
+			// gameScenes = gameScenes_;
 		} catch (InvalidSetGetException e) {
 			e.getMessage();
 			System.out.println("Game: Abilities");
@@ -187,29 +197,37 @@ public abstract class JFBAbstractGame extends JFBAbstractContainer implements JF
 		}
 	}
 
-	/* (non-Javadoc)
-	 * @see com.jfbuilds.playngame.general.JFBGameInterface#setGameObjectives(java.util.ArrayList)
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.jfbuilds.playngame.general.JFBGameInterface#setGameObjectives(java
+	 * .util.ArrayList)
 	 */
 	@Override
 	public void setGameObjectives(HashSet<JFBObjectiveInterface> gameObjectives_) {
 		try {
 			throw new InvalidSetGetException();
-			//gameScenes = gameScenes_;
+			// gameScenes = gameScenes_;
 		} catch (InvalidSetGetException e) {
 			e.getMessage();
 			System.out.println("Game: Objective");
 			e.printStackTrace();
 		}
 	}
-	
-	/* (non-Javadoc)
-	 * @see com.jfbuilds.playngame.general.JFBGameInterface#setGameScenes(java.util.ArrayList)
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * com.jfbuilds.playngame.general.JFBGameInterface#setGameScenes(java.util
+	 * .ArrayList)
 	 */
 	@Override
 	public void setGameScenes(ArrayList<JFBContainerInterface> gameScenes_) {
 		try {
 			throw new InvalidSetGetException();
-			//gameScenes = gameScenes_;
+			// gameScenes = gameScenes_;
 		} catch (InvalidSetGetException e) {
 			e.getMessage();
 			System.out.println("Game: Scenes");
@@ -220,9 +238,13 @@ public abstract class JFBAbstractGame extends JFBAbstractContainer implements JF
 	@Override
 	public void tick(int elapsed) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-	
+
+	public void userSelect(float x, float y) {
+		System.out.println("User has click cordinates: (" + x + ", " + y + ")");
+		click.play();
+		getCurrentScene().next();
+	}
 
 }

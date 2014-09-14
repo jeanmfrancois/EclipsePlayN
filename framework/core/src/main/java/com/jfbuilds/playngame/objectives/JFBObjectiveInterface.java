@@ -16,157 +16,157 @@ import com.jfbuilds.playngame.general.JFBStatusInterface;
  **/
 public interface JFBObjectiveInterface {
 
-    /* ===================================== */
-    /* ==         Member Variables        == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Member Variables == */
+	/* ===================================== */
 
-//    private boolean activated;
-//
-//    private int value;
-//
-//    private int steps;
-//
-//    private int incrementalValue;
-//
-//    private JFBConditionInterface condition;
-//
-//    private JFBStatusInterface status;
-//
-//    private JFBActionInterface incrementalAction;
-//
-//    private JFBActionInterface goalAction;
-//
-//    private JFBResetInterface reset;
-//
-//    private JFBEventBindsInterface eventBinds;
+	// private boolean activated;
+	//
+	// private int value;
+	//
+	// private int steps;
+	//
+	// private int incrementalValue;
+	//
+	// private JFBConditionInterface condition;
+	//
+	// private JFBStatusInterface status;
+	//
+	// private JFBActionInterface incrementalAction;
+	//
+	// private JFBActionInterface goalAction;
+	//
+	// private JFBResetInterface reset;
+	//
+	// private JFBEventBindsInterface eventBinds;
 
-    /* ===================================== */
-    /* ==         Methods                 == */
-    /* ===================================== */
+	/* ===================================== */
+	/* == Methods == */
+	/* ===================================== */
 
-    /**
-     *
-     **/
-    public boolean isActivated();
+	/**
+	 *
+	 **/
+	public JFBConditionInterface getCondition();
 
-    /**
-     *
-     **/
-    public void setActivated(boolean activated_);
+	/**
+	 *
+	 **/
+	public JFBEventBindsInterface getEventBinds();
 
-    /**
-     *
-     **/
-    public int getValue();
+	/**
+	 *
+	 **/
+	public JFBActionInterface getGoalAction();
 
-    /**
-     *
-     **/
-    public void setValue(int value_);
+	/**
+	 *
+	 **/
+	public JFBActionInterface getIncrementalAction();
 
-    /**
-     *
-     **/
-    public int getSteps();
+	/**
+	 *
+	 **/
+	public int getIncrementalValue();
 
-    /**
-     *
-     **/
-    public void setSteps(int steps_);
+	/**
+	 *
+	 **/
+	public HashSet<? extends JFBObjectiveInterface> getObjectiveFamily();
 
-    /**
-     *
-     **/
-    public int getIncrementalValue();
+	/**
+	 *
+	 **/
+	public JFBResetInterface getReset();
 
-    /**
-     *
-     **/
-    public void setIncrementalValue(int incrementalValue_);
+	/**
+	 *
+	 **/
+	public JFBStatusInterface getStatus();
 
-    /**
-     *
-     **/
-    public JFBConditionInterface getCondition();
+	/**
+	 *
+	 **/
+	public int getSteps();
 
-    /**
-     *
-     **/
-    public void setCondition(JFBConditionInterface condition_);
+	/**
+	 *
+	 **/
+	public int getValue();
 
-    /**
-     *
-     **/
-    public JFBStatusInterface getStatus();
+	/**
+	 *
+	 **/
+	public boolean isActivated();
 
-    /**
-     *
-     **/
-    public void setStatus(JFBStatusInterface status_);
+	/**
+	 *
+	 **/
+	public boolean isObjectiveCandidate(JFBObjectiveInterface candidate);
 
-    /**
-     *
-     **/
-    public JFBActionInterface getIncrementalAction();
+	/**
+	 *
+	 **/
+	public JFBContainerInterface parent();
 
-    /**
-     *
-     **/
-    public void setIncrementalAction(JFBActionInterface incrementalAction_);
+	/**
+	 *
+	 **/
+	public void setActivated(boolean activated_);
 
-    /**
-     *
-     **/
-    public JFBActionInterface getGoalAction();
+	/**
+	 *
+	 **/
+	public void setCondition(JFBConditionInterface condition_);
 
-    /**
-     *
-     **/
-    public void setGoalAction(JFBActionInterface goalAction_);
+	/**
+	 *
+	 **/
+	public void setEventBinds(JFBEventBindsInterface eventBinds_);
 
-    /**
-     *
-     **/
-    public JFBResetInterface getReset();
+	/**
+	 *
+	 **/
+	public void setGoalAction(JFBActionInterface goalAction_);
 
-    /**
-     *
-     **/
-    public void setReset(JFBResetInterface reset_);
+	/**
+	 *
+	 **/
+	public void setIncrementalAction(JFBActionInterface incrementalAction_);
 
-    /**
-     *
-     **/
-    public JFBEventBindsInterface getEventBinds();
+	/**
+	 *
+	 **/
+	public void setIncrementalValue(int incrementalValue_);
 
-    /**
-     *
-     **/
-    public void setEventBinds(JFBEventBindsInterface eventBinds_);
+	/**
+	 *
+	 **/
+	public void setObjectiveFamily(HashSet<? extends JFBObjectiveInterface> objectiveFamily_);
 
-    /**
-     *
-     **/
-    public boolean isObjectiveCandidate(JFBObjectiveInterface candidate);
-    
-    /**
-    *
-    **/
-   public HashSet<? extends JFBObjectiveInterface> getObjectiveFamily() ;
+	/**
+	 *
+	 **/
+	public void setParent(JFBContainerInterface parent_);
 
-   /**
-    *
-    **/
-   public void setObjectiveFamily(HashSet<? extends JFBObjectiveInterface> objectiveFamily_) ;
-   
-   /**
-   *
-   **/
-  public void setParent(JFBContainerInterface parent_) ;
-  
-  /**
-  *
-  **/
-  public JFBContainerInterface parent() ;
+	/**
+	 *
+	 **/
+	public void setReset(JFBResetInterface reset_);
+
+	/**
+	 *
+	 **/
+	public void setStatus(JFBStatusInterface status_);
+
+	/**
+	 *
+	 **/
+	public void setSteps(int steps_);
+
+	/**
+	 *
+	 **/
+	public void setValue(int value_);
 
 }
